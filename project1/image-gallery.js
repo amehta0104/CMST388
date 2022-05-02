@@ -22,11 +22,12 @@ image.style.height = '150px';
 
 image.addEventListener('click', () => {
     
-
+ 
 selectedImage.src = 'gallery/gallery'+ (i) + '.jpg';
 selectedImage.alt = 'gg';
 caption.innerHTML = captions[i-2];
 
+image.classList.toggle('activeBorder' );
 
 });
 
