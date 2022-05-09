@@ -1,0 +1,7 @@
+Project 3 Reflection:
+
+1. What resources did you use to determine what type of JavaScript was needed? Include all of the specific URLs you used and what you found at each URL.
+2. What process did you use to create your event_registration.js file? Describe what you did to create the code you submitted in the assignment. Be specific!
+3. What issues or challenges did you face completing this project? If you feel you did not face any issues or challenges in completing this project, what issues or challenges do you think someone new to JavaScript might face in completing this project?
+4. Describe another scenario that could use what you learned in completing this project. Be specific!
+5. If you could waive a magic wand and change something about this project, what would you change and why? If you do not believe anything should be changed, explain why you think this is the case.

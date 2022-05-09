@@ -95,7 +95,7 @@ var formatter = new Intl.NumberFormat('en-US', {
 function completePurchase(){
 
 	//validate name and email 
-var emailCheck = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+//svar emailCheck = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 	const name = document.getElementById('name');
 	const email = document.getElementById('email');
 	var msgName = document.getElementById('msgname');
@@ -107,6 +107,12 @@ msgName.innerText = 'Please enter a name';
 warning(name)
 return;
 	}
+
+	else if(!onlyLetters(name.value)){
+		msgName.innerText = 'Please enter valid characterss'
+		warning(name)
+		return;
+	}
 else{
 	msgName.innerText='';
 	success(name)
@@ -117,7 +123,7 @@ else{
 		return;
 	}
 
-	else if(!email.value.includes('@' && '.')){
+	else if(!email.value.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)){
 		msgEmail.innerText = 'Email Address needs @ or .(com,org,etc.) to be valid';
 		warning(email)
 		return;
@@ -134,10 +140,12 @@ alert('Success! Thank you for your purchase');
 clearInterval(countdownTimer)
 }
 
-
+function onlyLetters(str) {
+	return /^[a-zA-Z\s]+$/.test(str);
+  }
 
 function warning(formVar){
-formVar.style.backgroundColor = 'red';
+formVar.style.backgroundColor = 'yellow';
 }
 
 function success(formVar){
