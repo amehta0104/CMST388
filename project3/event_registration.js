@@ -67,6 +67,7 @@ var formatter = new Intl.NumberFormat('en-US', {
 
 
     var timer = duration, minutes, seconds;
+	
    countdownTimer =  setInterval(function () {
         minutes = parseInt(timer / 60, 10);
         seconds = parseInt(timer % 60, 10);
@@ -75,6 +76,7 @@ var formatter = new Intl.NumberFormat('en-US', {
         seconds = seconds < 10 ? "0" + seconds : seconds;
 
         display.textContent = minutes + ":" + seconds;
+		//console.log(timer)
 
         if (--timer < 0) {
             alert('The timer has expired! Try to purchase again');
