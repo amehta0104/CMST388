@@ -108,8 +108,9 @@ warning(name)
 return;
 	}
 
+	//checks to make sure name is string only
 	else if(!onlyLetters(name.value)){
-		msgName.innerText = 'Please enter valid characterss'
+		msgName.innerText = 'Please enter valid characters'
 		warning(name)
 		return;
 	}
